@@ -5,14 +5,14 @@ import {
   Link
 } from 'react-router-dom'
 
-class about extends Component {
+class Index extends Component {
   render() {
     return (
       <div>
-        About
+        Index
       </div>
     );
   }
 }
 
-export default about;
+export default Index;
