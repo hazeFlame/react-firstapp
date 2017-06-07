@@ -5,11 +5,15 @@ import {
   Link
 } from 'react-router-dom'
 
+let alerts = () =>{
+  alert(1)
+}
+
 class about extends Component {
   render() {
     return (
       <div>
-        About
+        <input type="button" value="button" onClick={alerts} />
       </div>
     );
   }
