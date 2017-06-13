@@ -1,4 +1,5 @@
 import React from 'react'
+import { render } from 'react-dom'
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import Index from '../components/index/index.js'
 import Home from '../components/home/home.js'

@@ -5,47 +5,29 @@ import {
   Link
 } from 'react-router-dom'
 
+const numbers = [1,2,3,4,5,6,7]
+
+const NumbersList = p =>{
+  const numbers = p.numbers;
+  const listItems = numbers.map(numbers=>
+    <li key={numbers.toString()}>
+      {numbers}
+    </li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  )
+}
+
 class Topic extends Component {
   render() {
     return (
       <div>
-        Topic
+        <input type="text" value="" />
+        <NumbersList numbers={numbers}/>
       </div>
     );
   }
 }
-// class Topics = ({ match }) extends Component => (
-//   <div>
-//     <h2>主题列表</h2>
-//     <ul>
-//       <li>
-//         <Link to={`${match.url}/rendering`}>
-//           使用 React 渲染
-//         </Link>
-//       </li>
-//       <li>
-//         <Link to={`${match.url}/components`}>
-//           组件
-//         </Link>
-//       </li>
-//       <li>
-//         <Link to={`${match.url}/props-v-state`}>
-//           属性 v. 状态
-//         </Link>
-//       </li>
-//     </ul>
-//
-//     <Route path={`${match.url}/:topicId`} component={Topic}/>
-//     <Route exact path={match.url} render={() => (
-//       <h3>请选择一个主题。</h3>
-//     )}/>
-//   </div>
-// )
-//
-// const Topic = ({ match }) => (
-//   <div>
-//     <h3>{match.params.topicId}</h3>
-//   </div>
-// )
 
 export default Topic;
